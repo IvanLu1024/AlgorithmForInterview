@@ -5,8 +5,7 @@
 ## 数组问题 
 
 - [常见的数组问题](https://github.com/DuHouAn/00Algorithm/blob/master/03LeetCodeForInterview/00LeetCode%E4%B8%AD%E7%9A%84%E6%95%B0%E7%BB%84%E9%97%AE%E9%A2%98.md)
-- [常见的数组问题相关代码]
-(https://github.com/DuHouAn/AlgorithmForInterview/tree/master/src/com/southeast/code_00_array)
+- [常见的数组问题相关代码](https://github.com/DuHouAn/AlgorithmForInterview/tree/master/src/com/southeast/code_00_array)
 ## 查找表问题
 ## 链表问题
 ## 栈、队列、优先队列
