@@ -1,6 +1,4 @@
 package com.southeast.code_01_array;
-
-import com.southeast.utils.ArrayUtils;
 import org.junit.Test;
 
 /**
@@ -58,6 +56,7 @@ public class Code_00_BinarySearch {
     public void test2(){
         int n=10000000;
         Integer[] arr= ArrayUtils.generateOrderedArray(n);
+                //ArrayUtils.generateOrderedArray(n);
 
         long startTime=System.currentTimeMillis();
         for(int i=0;i<n;i++){
