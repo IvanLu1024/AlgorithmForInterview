@@ -1,4 +1,4 @@
-package com.southeast.code_00_array;
+package com.southeast.code_01_array;
 
 /**
  * 80. Remove Duplicates from Sorted Array II
