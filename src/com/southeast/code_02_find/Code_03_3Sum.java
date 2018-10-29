@@ -26,52 +26,52 @@ public class Code_03_3Sum {
      * @return
      */
     public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> ret=new ArrayList<>();
         if(nums.length<3){
-            return null;
+            return ret;
         }
         Map<Integer,Integer> map=new HashMap<>();
-        List<List<Integer>> ret=new ArrayList<>();
+        //HashMap<Intager,Integer>,键存储的是该元素的值，值存储的是该元素出现的次数
+        for(int num:nums){
+            int freq=map.get(num)==null?0:map.get(num);
+            map.put(num,++freq);
+        }
+        Set<Integer> keySet=map.keySet();
+        for(Integer num:keySet){
+            //num 表示数组中的元素值
+            //numCount为该元素出现的次数
+            int numCount=map.get(num);
 
-        //HashMap<Intager,Integer>,键存储的是该元素的值，值存储的是该元素的下标.
-        for(int i=0;i<nums.length;i++){
-            int target=-nums[i];
-            for(int j=i+1;j<nums.length;j++){
-                int v=target-nums[j];
-                if(map.containsKey(v)){
-                    List<Integer> list=new ArrayList<>();
-                    list.add(i);
-                    list.add(j);
-                    list.add(map.get(v));
-                    ret.add(list);
+            //三个相同元素相加的情况
+            if(numCount>=3){
+                 //num元素出现3次以上的，用该元素值相加和为0,只能是0了。
+                if(num==0){
+                    ret.add(Arrays.asList(0,0,0));
                 }
             }
-            map.put(nums[i],i);
+
+            //两个相同元素和另外一个元素相加的情况
+            if(numCount>=2){
+                //num元素出现次数为2,用该元素之和另外一个元素和为0，
+                int target=0-2*num;
+                if(map.containsKey(target) && target!=0){
+                    //如果map中存在target值，则说明（num，num,target）是一组解
+                    //target如果是0,那么就变成了（0,0,0）三个相同元素之和了
+                    ret.add(Arrays.asList(num,num,target));
+                }
+            }
+
+            //三个不同元素相加的情况
+            for(Integer num2:keySet){
+                int num3=0-num-num2;
+                //假设 [num,num2,num3]是有序的并且num<num2<num3
+                if(num>=num2 || num2>=num3 || map.get(num3)==null){
+                    continue;
+                }
+                ret.add(Arrays.asList(num,num2,num3));
+            }
         }
         return ret;
-    }
-
-    public List<List<Integer>> threeSum1(int[] nums) {
-        if (nums==null||nums.length==0){
-            return null;
-        }
-        List<List<Integer>> res=new ArrayList<>();
-        Map<Integer,Integer> numMap=new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            int target=-nums[i];
-            for (int j = 0; j <nums.length ; j++) {
-                int cmp=target-nums[j];
-                if (numMap.containsKey(cmp)){
-                    List<Integer> list=new LinkedList<>();
-                    list.add(-target);
-                    list.add(cmp);
-                    list.add(nums[j]);
-                    res.add(list);
-                }
-                numMap.put(nums[j],j);
-            }
-        }
-        return  res;
-
     }
 
     @Test
