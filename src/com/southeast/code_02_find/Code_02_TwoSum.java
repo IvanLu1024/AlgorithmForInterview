@@ -24,6 +24,7 @@ public class Code_02_TwoSum {
             return null;
         }
         Map<Integer,Integer> map=new HashMap<>();
+        //HashMap<Intager,Integer>,键存储的是该元素的值，值存储的是该元素的下标.
         for(int i=0;i<nums.length;i++){
             int v=target-nums[i];
             //在看查找表中查找是否有 target-nums[i]元素
