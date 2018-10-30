@@ -11,7 +11,7 @@ package com.southeast.code_01_array;
  * Output: 2
  * Explanation: the subarray [4,3] has the minimal length under the problem constraint.
  */
-public class Code_09_MinimumSizeSubarraySum {
+public class Code_10_MinimumSizeSubarraySum {
     public int minSubArrayLen(int s, int[] nums) {
         int n=nums.length;
         int l=0,r=-1;
