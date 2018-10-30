@@ -33,7 +33,7 @@ public class Code_07_KthLargestElementInAnArray {
                 break;
             }else if(m<k){ //说明
                 low=m+1;
-            }else{
+            }else if(m>k){
                 high=m-1;
             }
         }
@@ -50,7 +50,7 @@ public class Code_07_KthLargestElementInAnArray {
             }
             nums[l]=nums[r];
             //从右向左遍历，找出第一个>pivot的元素
-            while(l<r && nums[r]<=pivot){
+            while(l<r && nums[l]<=pivot){
                 l++;
             }
             nums[r]=nums[l];
@@ -62,10 +62,19 @@ public class Code_07_KthLargestElementInAnArray {
     @Test
     public void test(){
         int[] nums={3,2,1,5,6,4};
-        //int index=partition(nums,0,nums.length-1);
-        //System.out.println(index);
+        int index=partition(nums,0,nums.length-1);
+        for(int num:nums){
+            System.out.print(num+" ");
+        }
+        System.out.println();
+        System.out.println(index);
+        int index2=partition(nums,3,nums.length-1);
+        for(int num:nums){
+            System.out.print(num+" ");
+        }
+        System.out.println();
          int k = 2;
          int ele=findKthLargest(nums,k);
-        System.out.println(ele);
+        System.out.println("ele:"+ele);
     }
 }

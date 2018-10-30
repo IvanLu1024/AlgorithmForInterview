@@ -30,7 +30,7 @@ public class Code_06_MergeSortedArray {
                 nums1[index--]=nums2[j--];
             }
         }
-        //nums2任然有剩余元素，且是最小的那部分元素，将这些元素直接复制到num1的前面
+        //nums2仍然有剩余元素，且是最小的那部分元素，将这些元素直接复制到num1的前面
         while(j>=0){
             nums1[index--]=nums2[j--];
         }
