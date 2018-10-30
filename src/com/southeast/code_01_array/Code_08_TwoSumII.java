@@ -17,7 +17,7 @@ package com.southeast.code_01_array;
  *
  * Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
  */
-public class Code_06_TwoSumII {
+public class Code_08_TwoSumII {
 
     /**
      * 思路一：
