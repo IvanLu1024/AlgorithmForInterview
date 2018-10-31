@@ -20,7 +20,7 @@ import org.junit.Test;
  * Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
  * It doesn't matter what values are set beyond the returned length.
  */
-public class Code_03_RemoveDuplicates {
+public class Code_26_RemoveDuplicates {
     /**
      * 思路：
      * 1、准备一个指针k,[0,k]是没有重复元素

@@ -20,7 +20,7 @@ import org.junit.Test;
  *  Note that the order of those five elements can be arbitrary.
  *  It doesn't matter what values are set beyond the returned length.
  */
-public class Code_02_RemoveElement {
+public class Code_27_RemoveElement {
     /**
      * 思路1：
      * 1、准备一个指针k，指向不是val的元素,保证 [0,k)都没有val元素

@@ -19,7 +19,7 @@ package com.southeast.code_01_array;
  * Input: "pwwkew"
  * Output: 3
  */
-public class Code_10_LongestSubstringWithoutRepeatingCharacters {
+public class Code_03_LongestSubstringWithoutRepeatingCharacters {
     public int lengthOfLongestSubstring(String s) {
         int n=s.length();
 

@@ -16,7 +16,7 @@ package com.southeast.code_01_array;
  * Your function should return length = 7, with the first seven elements of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.
  * It doesn't matter what values are set beyond the returned length.
  */
-public class Code_04_RemoveDuplicatesII {
+public class Code_80_RemoveDuplicatesII {
     public int removeDuplicates(int[] nums) {
         if (nums.length<= 2){
             return nums.length;

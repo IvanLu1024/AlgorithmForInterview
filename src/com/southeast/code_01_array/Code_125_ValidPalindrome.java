@@ -16,7 +16,7 @@ import org.junit.Test;
  * Input: "race a car"
  * Output: false
  */
-public class Code_09_ValidPalindrome {
+public class Code_125_ValidPalindrome {
     public boolean isPalindrome(String s) {
         StringBuilder sb=new StringBuilder();
         for(int k=0;k<s.length();k++){

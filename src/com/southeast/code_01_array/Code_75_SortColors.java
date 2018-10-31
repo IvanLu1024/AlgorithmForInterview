@@ -13,7 +13,7 @@ import org.junit.Test;
  * Input: [2,0,2,1,1,0]
  * Output: [0,0,1,1,2,2]
  */
-public class Code_05_SortColors {
+public class Code_75_SortColors {
     /**
      * 思路一：
      分别统计0,1,2元素个数，然后再对数组重新赋值

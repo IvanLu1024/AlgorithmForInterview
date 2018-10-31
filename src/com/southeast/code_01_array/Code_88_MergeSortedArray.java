@@ -16,7 +16,7 @@ package com.southeast.code_01_array;
  * Output:
  * [1,2,2,3,5,6]
  */
-public class Code_06_MergeSortedArray {
+public class Code_88_MergeSortedArray {
     //思路：采用合并排序的思路,这里要想空间复杂度为O（1）,则将两个数组中元素从后向前合并.
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         //从后向前合并

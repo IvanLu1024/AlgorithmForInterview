@@ -17,7 +17,7 @@ import java.util.List;
  *  You must do this in-place without making a copy of the array.
  *  Minimize the total number of operations.
  */
-public class Code_01_MoveZones {
+public class Code_283_MoveZones {
     /**
      * 思路一：
      * 1、准备一个集合，用于存储该数组中的非0元素，遍历数组中元素，遇到非0元素，就放入集合中
