@@ -37,16 +37,14 @@ public class Code_76_MinimumWindowSubstring {
                 //r++;
                 count++;
             }
+            r++;
             if(count==t.length()){
                 ret=Math.min(ret,r-l);
-                l++;
-            }
-            while(count==t.length()){
-                if (++tFreq[s.charAt(++r)]>=1) {
+                if(++tFreq[s.charAt(l)]>=1){
                     count--;
                 }
+                l++;
             }
-            r++;
         }
         return s.substring(l,l+ret);
     }
