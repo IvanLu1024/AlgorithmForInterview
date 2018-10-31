@@ -34,8 +34,9 @@ public class Code_290_WordPattern {
         if(str!=null){
             strs = str.split(" ");
         }
-        if(pattern.length() != strs.length)
+        if(pattern.length() != strs.length){
             return false;
+        }
 
         for(int i=0;i<pattern.length();i++){
             char c=pattern.charAt(i);
@@ -45,8 +46,9 @@ public class Code_290_WordPattern {
                     return false;
                 }
             }else{
-                if(map.containsValue(strs[i]))
+                if(map.containsValue(strs[i])){
                     return false;
+                }
                 map.put(c,strs[i]);
             }
         }
