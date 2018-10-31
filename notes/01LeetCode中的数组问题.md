@@ -541,13 +541,144 @@ public int[] twoSum(int[] numbers, int target) {
     }
 ```
 时间复杂度：O(n)
+
 空间复杂度：O(1)
     
 [125 Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)
 
+```java
+//算法思路：对撞指针。只不过要注意遇到不是字母或者数字的字符要跳过，字符之间的比较是忽略大小写的
+public boolean isPalindrome(String s) {
+    int i=0;
+    int j=s.length()-1;
+    while(i<j){
+        char c1=s.charAt(i);
+        char c2=s.charAt(j);
+        if(!isNumber(c1) && !isAlpha(c1)){
+            i++;
+            continue;
+        }
+        if(!isNumber(c2) && !isAlpha(c2)){
+            j--;
+            continue;
+        }
+        if(!isEqual(c1,c2)){
+            return false;
+        }
+        i++;
+        j--;
+    }
+    return true;
+}
+
+//比较两个字符是否相等,如果是字母，就忽略大小写
+public boolean isEqual(char c1,char c2){
+    if(c1==c2){
+        return true;
+    }else{
+        if((isAlpha(c1) && isAlpha(c2)) && Math.abs(c1-c2)==32){
+            return true;
+        }
+    }
+    return false;
+}
+
+public boolean isNumber(char c){
+    if(c>='0' && c<='9'){
+        return true;
+    }
+    return false;
+}
+
+public boolean isAlpha(char c){
+    if((c>='A' && c<='Z') || (c>='a' && c<='z')){
+        return true;
+    }
+    return false;
+}
+```
+时间复杂度：O(n)
+
+空间复杂度：O(1)
+
 [344 Reverse String](https://leetcode.com/problems/reverse-string/description/)
 
+```java
+public String reverseString(String s) {
+    int i=0;
+    int j=s.length()-1;
+    char[] chs=s.toCharArray();
+    while(i<j){
+        char tmp=chs[i];
+        chs[i]=chs[j];
+        chs[j]=tmp;
+        i++;
+        j--;
+    }
+    return new String(chs);
+}
+```
+时间复杂度：O(n)
+
+空间复杂度：O(n)
+
 [11 Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/)
+
+<div align="center"> <img src="pics//array//array_05.png" width="600"></div>
+
+* 解题：
+
+解法一：
+```java
+//时间复杂度：O(n^2)
+//空间复杂度：O(1)
+public int maxArea1(int[] height) {
+    int mostWater=0;
+    for(int i=0;i<height.length;i++){
+        for(int j=i+1;j<height.length;j++){
+            int h=Math.min(height[i],height[j]);
+            if((j-i)*h>mostWater){
+                mostWater=(j-i)*h;
+            }
+        }
+    }
+    return mostWater;
+}
+```
+解法二：
+```java
+/**
+ *  对撞指针
+ *  假设有左指针和右指针，且左指针指向的值小于右指针的值。
+ *  假如我们将右指针左移，则右指针左移后的值和左指针指向的值相比有三种情况：
+ *  （1）右指针指向的值大于左指针：这种情况下，容器的高取决于左指针，但是底变短了，所以容器盛水量一定变小
+ *  （2）右指针指向的值等于左指针：这种情况下，容器的高取决于左指针，但是底变短了，所以容器盛水量一定变小
+ *  （3）右指针指向的值小于左指针：这种情况下，容器的高取决于右指针，但是右指针小于左指针，且底也变短了，所以容量盛水量一定变小了
+ *  反之，情况类似。
+ *  综上所述，容器高度较大的一侧的移动只会造成容器盛水量减小。
+ *  所以应当移动高度较小一侧的指针，并继续遍历，直至两指针相遇。
+ */
+//时间复杂度：O(n)
+//空间复杂度：O(1)
+public int maxArea(int[] height) {
+    int i=0;
+    int j=height.length-1;
+    int mostWater=0;
+    while(i<j){
+        int h=Math.min(height[i],height[j]);
+        if((j-i)*h>mostWater){
+            mostWater=(j-i)*h;
+        }
+        if(height[i]<height[j]){
+            i++;
+        }else{
+            j--;
+        }
+    }
+    return mostWater;
+}
+```
+
 ### 滑动窗口
 [209 Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/description/)
 
