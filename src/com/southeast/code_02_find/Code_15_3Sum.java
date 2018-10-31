@@ -17,7 +17,7 @@ import java.util.*;
  * Given array nums = [-1, 0, 1, 2, -1, -4],、
  * A solution set is:[[-1, 0, 1],[-1, -1, 2]]
  */
-public class Code_03_3Sum {
+public class Code_15_3Sum {
     /**
      * 思路：
      * 类比twoSum中方法

@@ -18,7 +18,7 @@ import java.util.Map;
  *
  * return [0, 1].
  */
-public class Code_02_TwoSum {
+public class Code_01_TwoSum {
     public int[] twoSum(int[] nums, int target) {
         if(nums.length<=1){
             return null;

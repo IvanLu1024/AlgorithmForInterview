@@ -19,7 +19,7 @@ import java.util.Set;
  * Each element in the result must be unique.
  * The result can be in any order.
  */
-public class Code_00_IntersectionOfTwoArrays {
+public class Code_349_IntersectionOfTwoArrays {
     public int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> set=new HashSet<>();
         for(int i=0;i< nums1.length;i++){

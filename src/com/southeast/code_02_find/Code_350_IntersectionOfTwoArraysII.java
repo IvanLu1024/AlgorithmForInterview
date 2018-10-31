@@ -15,7 +15,7 @@ import java.util.*;
  * Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
  * Output: [4,9]
  */
-public class Code_01_IntersectionOfTwoArraysII {
+public class Code_350_IntersectionOfTwoArraysII {
     public int[] intersect(int[] nums1, int[] nums2) {
         Map<Integer,Integer> map=new HashMap<>();
         //map记录元素出现的次数

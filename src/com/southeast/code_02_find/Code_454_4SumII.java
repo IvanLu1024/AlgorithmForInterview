@@ -25,7 +25,7 @@ import java.util.Map;
  *1. (0, 0, 0, 1) -> A[0] + B[0] + C[0] + D[1] = 1 + (-2) + (-1) + 2 = 0
  *2. (1, 1, 0, 0) -> A[1] + B[1] + C[0] + D[0] = 2 + (-1) + (-1) + 0 = 0
  */
-public class Code_04_4SumII {
+public class Code_454_4SumII {
     //准备将C+D数组的每一种可能放入查找表中
     public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
         Map<Integer,Integer> map=new HashMap<>();
