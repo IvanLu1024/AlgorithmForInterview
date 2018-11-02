@@ -25,7 +25,7 @@ public class Code_206_ReverseLinkedList {
 
     public ListNode reverseList(ListNode head) {
         if(head==null || head.next==null){
-            return null;
+            return head;
         }
 
         ListNode next=head.next;
