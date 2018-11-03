@@ -1,5 +1,7 @@
 package com.southeast.code_03_list;
 
+import org.junit.Test;
+
 /**
  * Reverse a singly linked list.
  * Example:
@@ -33,5 +35,14 @@ public class Code_206_ReverseLinkedList {
         ListNode newNode=reverseList(next);
         next.next=head;
         return newNode;
+    }
+
+    @Test
+    public void test(){
+        int[] arr={1,2,3,4,5};
+        ListNode head=LinkedListUtils.createLinkedList(arr);
+        LinkedListUtils.printList(head);
+        head=reverseList(head);
+        LinkedListUtils.printList(head);
     }
 }
