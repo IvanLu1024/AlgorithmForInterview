@@ -1,5 +1,8 @@
 package com.southeast.code_03_list;
 
+
+import org.junit.Test;
+
 /**
  * 92. Reverse Linked List II
  *
@@ -37,5 +40,15 @@ public class Code_92_ReverseLinkedListII {
             nodeB=nodeA.next;
         }
         return head.next;
+    }
+
+    @Test
+    public void test(){
+        int arr[]={1,2,3,4,5};
+        int m=2,n=4;
+        ListNode head=LinkedListUtils.createLinkedList(arr);
+        LinkedListUtils.printList(head);
+        head=reverseBetween(head,m,n);
+        LinkedListUtils.printList(head);
     }
 }
