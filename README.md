@@ -10,6 +10,8 @@
 - [查找表问题](https://github.com/DuHouAn/AlgorithmForInterview/blob/master/notes/02%E6%9F%A5%E6%89%BE%E9%97%AE%E9%A2%98.md)
 - [查找表问题相关代码](https://github.com/DuHouAn/AlgorithmForInterview/tree/master/src/com/southeast/code_02_find)
 ## 链表问题
+- [链表问题](https://github.com/DuHouAn/AlgorithmForInterview/blob/master/notes/03%E9%93%BE%E8%A1%A8%E9%97%AE%E9%A2%98.md)
+- [链表问题相关代码](https://github.com/DuHouAn/AlgorithmForInterview/tree/master/src/com/southeast/code_03_list)
 ## 栈、队列、优先队列
 ## 二叉树和递归
 ## 递归和回溯法
