@@ -1,5 +1,6 @@
 package com.southeast.code_02_find;
 
+
 import java.util.*;
 
 /**
@@ -20,8 +21,8 @@ import java.util.*;
  * The order of your output does not matter.
  */
 public class Code_49_GroupAnagrams {
-    public List<List<String>> groupAnagrams(String[] strs) {
-        Map<String,List<String>> map=new HashMap<>();
+    public ArrayList groupAnagrams(String[] strs) {
+        Map<String, ArrayList<Object>> map=new HashMap<>();
         //map存储的是<字符串的字母按照字母排序后得到的字符串,与之相应的anagram>
         for(int i=0;i<strs.length;i++){
             char[] chs=strs[i].toCharArray();
