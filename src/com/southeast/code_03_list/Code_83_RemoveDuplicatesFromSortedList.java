@@ -25,6 +25,7 @@ public class Code_83_RemoveDuplicatesFromSortedList {
         while(newCur!=null){
             //ListNode next=cur.next;
             if(cur.val==newCur.val){
+                //如果相邻元素是相等的话，删除后者
                 cur.next=newCur.next;
             }else{
                 cur=newCur;
