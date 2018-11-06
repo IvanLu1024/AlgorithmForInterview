@@ -38,7 +38,9 @@ public class Code_82_RemoveDuplicatesFromSortedListII {
           }
           cur=cur.next;
         }
-        //cur此时是最后一个元素，如果pre.next不是最后一个元素，则pre就是最后一个元素了
+        //cur此时是最后一个元素，
+        //如果pre.next不是最后一个元素，这就说明最后一个元素是重复元素，被删除了，
+        //则pre就是最后一个元素了
         if(pre.next!=cur){
             pre.next=null;
         }
